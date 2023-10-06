@@ -1,12 +1,30 @@
-import LogoImage from "../../assets/images/acai-logo.svg"
-import "./header.scss"
+import LogoImage from "../../assets/images/acai-logo.svg";
+import BackIcon from "../../assets/images/icon-back.svg";
+import "./header.scss";
+
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
-  return (
-    <header>
-        <img src={LogoImage} alt="Logo" />
-    </header>
-  )
-}
+  const { pathname } = useLocation();
 
-export default Header
+  return (
+    <header className={`${pathname === "/" && "home"}`}>
+      {pathname === "/" ? (
+        <img src={LogoImage} alt="Logo" />
+      ) : (
+        <div className="container">
+          <div className="controls">
+            <button className="back-button">
+              <img src={BackIcon} alt="back" />
+            </button>
+            <button className="ask-waiter-button">
+              <span>Ofisiantı çağır</span>
+            </button>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};
+
+export default Header;

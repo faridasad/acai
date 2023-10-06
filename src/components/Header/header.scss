@@ -1,5 +1,53 @@
 header {
     display: grid;
-    place-content: center;
-    padding: 1rem;
+    padding-top: 2rem;
+
+    &.home {
+        place-content: center;
+    }
+
+    .controls {
+        display: flex;
+        align-items: center;
+        gap: 1.875rem;
+
+        padding-bottom: 1.75rem;
+
+        button {
+            all: unset;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        button.back-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex: .1;
+        }
+
+        button.ask-waiter-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex: .9;
+            height: 2.125rem;
+            border-radius: 100vmax;
+
+            background-color: var(--clr-neutral-100);
+
+            span {
+                color: var(--clr-accent-400);
+                font-size: var(--fs-600);
+                font-weight: var(--fw-regular);
+                
+                line-height: 18px;
+            }
+        }
+    }
 }
