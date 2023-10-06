@@ -22,7 +22,7 @@
 /* Utilitiy classes */
 
 .container {
-  --max-width: 800px;
+  --max-width: 1000px;
   --padding: .6875rem;
 
   width: min(var(--max-width), 100% - var(--padding) * 2);
