@@ -1,7 +1,12 @@
 import "./App.scss";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+} from "react-router-dom";
 import Home from "./pages/Home";
-import Header from "./components/Header"
+import Header from "./components/Header";
+import Category from "./pages/Category";
 
 function App() {
   const Layout = () => {
@@ -19,7 +24,10 @@ function App() {
     {
       path: "/",
       element: <Layout />,
-      children: [{ path: "/", element: <Home /> }],
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "/:category", element: <Category /> },
+      ],
     },
   ]);
 
