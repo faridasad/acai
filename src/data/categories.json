@@ -1,0 +1,142 @@
+{
+  "categories": {
+    "salads": {
+      "name": "salatlar",
+      "items": [
+        {
+          "name": "İngilis Salatı",
+          "ingredients": ["Göbələk", "toyuq əti", "xiyar", "mayonez"],
+          "price": 5.0,
+          "img_url": ""
+        },
+        {
+          "name": "Toyuq Salatı Yağda",
+          "ingredients": [
+            "Bibər",
+            "xiyar",
+            "kök",
+            "toyuq əti",
+            "cəfəri",
+            "zeytun yağı"
+          ],
+          "price": 5.0,
+          "img_url": ""
+        },
+        {
+          "name": "Çoban Salatı",
+          "ingredients": ["Pomidor", "xiyar", "göyərti", "zeytun yağı"],
+          "price": 5.0,
+          "img_url": ""
+        },
+        {
+          "name": "Mimoza Salatı",
+          "ingredients": [
+            "Kartof",
+            "kök",
+            "yumurta",
+            "xiyar",
+            "holland pendiri",
+            "toyuq əti",
+            "mayonez"
+          ],
+          "price": 6.0,
+          "img_url": ""
+        },
+        {
+          "name": "Paytaxt Salatı",
+          "ingredients": ["Kartof", "kök", "yumurta", "xiyar", "yaşıl noxud"],
+          "price": 5.0,
+          "img_url": ""
+        },
+        {
+          "name": "Əzmə badımcan Salatı",
+          "ingredients": ["Badımcan", "pomidor", "bibər", "sarımsaq"],
+          "price": 5.0,
+          "img_url": ""
+        },
+        {
+          "name": "Qarğıdalı Salatı",
+          "ingredients": ["Qarğıdalı", "yumurta", "kök", "xiyar", "mayonez"],
+          "price": 5.0,
+          "img_url": ""
+        },
+        {
+          "name": "Şuba Salatı",
+          "ingredients": [
+            "Çuğundur",
+            "kartof",
+            "kök",
+            "yumurta",
+            "siyənək balığı",
+            "mayonez"
+          ],
+          "price": 5.0,
+          "img_url": ""
+        }
+      ]
+    },
+    "soups": {
+      "name": "şorbalar",
+      "items": [
+        {
+          "name": "Mərcimək Şorbası",
+          "ingredients": ["Mərci", "kök", "soğan", "quru nanə"],
+          "price": 4.0,
+          "img_url": ""
+        },
+        {
+          "name": "Toyuq Şorbası",
+          "ingredients": [
+            "Kök",
+            "kartof",
+            "bibər",
+            "düyü",
+            "toyuq filesi",
+            "kərə yağı",
+            "cəfəri"
+          ],
+          "price": 5.0,
+          "img_url": ""
+        },
+        {
+          "name": "Doğramac",
+          "ingredients": ["Qatıq", "xiyar", "göyərti"],
+          "price": 4.0,
+          "img_url": ""
+        },
+        {
+          "name": "Tomat Şorbası",
+          "ingredients": ["Tomat", "qaymaq", "holland pendiri"],
+          "price": 6.0,
+          "img_url": ""
+        },
+        {
+          "name": "Göbələk Şorbası",
+          "ingredients": ["Göbələk", "süd", "qaymaq", "un", "soğan"],
+          "price": 5.0,
+          "img_url": ""
+        },
+        {
+          "name": "Yayla Şorbası",
+          "ingredients": [
+            "Qatıq",
+            "düyü",
+            "yumurta",
+            "un",
+            "qaymaq",
+            "quru nanə",
+            "kərə yağı"
+          ],
+          "price": 5.0,
+          "img_url": ""
+        },
+        {
+          "name": "Dovğa",
+          "ingredients": ["Qatıq", "yumurta", "düyü", "göyərti", "noxud"],
+          "price": 4.0,
+          "img_url": ""
+        }
+      ]
+    }
+  }
+}
