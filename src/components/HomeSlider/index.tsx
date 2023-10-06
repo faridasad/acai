@@ -1,26 +1,14 @@
 import "./home_slider.scss";
 
-const SLIDER_ITEMS = [
-  {
-    name: "Səhər yeməyi set 10% endirim",
-    img_url: "/breakfast.png",
-  },
-  {
-    name: "Qarışıq set 5% endirim",
-    img_url: "/mixed_set.png",
-  },
-  {
-    name: "Səhər yeməyi set 10% endirim",
-    img_url: "/breakfast.png",
-  },
-  {
-    name: "Qarışıq set 5% endirim",
-    img_url: "/mixed_set.png",
-  },
-];
+// Types
+interface HomeSliderProps {
+  items: {
+    name: string;
+    img_url: string;
+  }[];
+}
 
-const HomeSlider = () => {
-  console.log("rendered");
+const HomeSlider: React.FC<HomeSliderProps> = ({items}) => {
   return (
     <section
       className="home-slider"
@@ -29,7 +17,7 @@ const HomeSlider = () => {
       }
     >
       <ul className="home-slider__inner">
-        {SLIDER_ITEMS.map((item, idx) => {
+        {items.map((item, idx) => {
           return (
             <li key={idx} className="home-slider-item">
               <img src={item.img_url} alt={item.name} />
