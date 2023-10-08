@@ -15,6 +15,11 @@
     column-gap: var(--_column-gap);
     row-gap: var(--_row-gap);
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     li {
       display: flex;
       flex-direction: column;
