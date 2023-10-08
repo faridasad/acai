@@ -7,7 +7,7 @@
           "name": "İngilis Salatı",
           "ingredients": ["Göbələk", "toyuq əti", "xiyar", "mayonez"],
           "price": 5.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088712395358228/0d3e6ddeb71f47297ea34f04a04803b3.png"
         },
         {
           "name": "Toyuq Salatı Yağda",
@@ -20,13 +20,13 @@
             "zeytun yağı"
           ],
           "price": 5.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088714509295626/6420da3d5d521da0c8cf656ecbf0d9d0.png"
         },
         {
           "name": "Çoban Salatı",
           "ingredients": ["Pomidor", "xiyar", "göyərti", "zeytun yağı"],
           "price": 5.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088713741742080/5fe81336c2f1dd6ec5a1ba5bab66edfd.png"
         },
         {
           "name": "Mimoza Salatı",
@@ -40,25 +40,25 @@
             "mayonez"
           ],
           "price": 6.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088714123411456/84e9c9af9a5b9c60bfccfd9127b7f1bf.png"
         },
         {
           "name": "Paytaxt Salatı",
           "ingredients": ["Kartof", "kök", "yumurta", "xiyar", "yaşıl noxud"],
           "price": 5.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088712701554698/0d4fdd187f03b06c24a99170de176f7c.png"
         },
         {
           "name": "Əzmə badımcan Salatı",
           "ingredients": ["Badımcan", "pomidor", "bibər", "sarımsaq"],
           "price": 5.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088714819678218/e604903749002124d47705c7744dcd53.png"
         },
         {
           "name": "Qarğıdalı Salatı",
           "ingredients": ["Qarğıdalı", "yumurta", "kök", "xiyar", "mayonez"],
           "price": 5.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088713448128553/4a3f405a13a240bfe265d9f65a4dfba8.png"
         },
         {
           "name": "Şuba Salatı",
@@ -71,7 +71,7 @@
             "mayonez"
           ],
           "price": 5.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088713448128553/4a3f405a13a240bfe265d9f65a4dfba8.png"
         }
       ]
     },
@@ -82,7 +82,7 @@
           "name": "Mərcimək Şorbası",
           "ingredients": ["Mərci", "kök", "soğan", "quru nanə"],
           "price": 4.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120595938295878/137d38887df73222182442e4a35addb6.png"
         },
         {
           "name": "Toyuq Şorbası",
@@ -96,25 +96,25 @@
             "cəfəri"
           ],
           "price": 5.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120597255311391/c274dad235ef989942ec54a907fe7528.png"
         },
         {
           "name": "Doğramac",
           "ingredients": ["Qatıq", "xiyar", "göyərti"],
           "price": 4.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120596219305996/7166bd1505fbff68c505d8403e8ecb85.png"
         },
         {
           "name": "Tomat Şorbası",
           "ingredients": ["Tomat", "qaymaq", "holland pendiri"],
           "price": 6.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120596538085397/a07aa78adc850e64caf7578c55c5fde4.png"
         },
         {
           "name": "Göbələk Şorbası",
           "ingredients": ["Göbələk", "süd", "qaymaq", "un", "soğan"],
           "price": 5.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120596877819994/c64d9048be729125b072f4629d1cc31d.png"
         },
         {
           "name": "Yayla Şorbası",
@@ -128,13 +128,13 @@
             "kərə yağı"
           ],
           "price": 5.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120595321724999/12f6b8af96b337bdff50f2ba6011e6bc.png"
         },
         {
           "name": "Dovğa",
           "ingredients": ["Qatıq", "yumurta", "düyü", "göyərti", "noxud"],
           "price": 4.0,
-          "img_url": ""
+          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120595653087282/91a7242c21cc31ad934b14a084d689b9.png"
         }
       ]
     }
