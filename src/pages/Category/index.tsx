@@ -1,18 +1,23 @@
 // React and Hooks
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
-import useBasketStore from "../../store/BasketStore";
+import useCartStore from "../../store/CartStore";
 
 // Components and Styles
 import Search from "../../components/Search";
 import CategoryData from "../../data/categories.json";
+import CategoryListItem from "../../components/CategoryListItem";
 import Error from "../Error";
+import { Drawer } from "vaul";
+
 import "./category.scss";
 
-// Assets
-import MinusIcon from "../../assets/images/icon-minus.svg";
-import PlusIcon from "../../assets/images/icon-plus.svg";
-import MessageIcon from "../../assets/images/icon-message.svg";
+
+export interface SelectedProduct {
+  id: number,
+  quantity: number;
+}
+
 
 interface CategoryProps {}
 
@@ -24,63 +29,39 @@ const Category: React.FC<CategoryProps> = () => {
 
   if (!categories.hasOwnProperty(path)) return <Error />;
 
-  const categoryItems = categories[path].items;
+  const categoryItems = useMemo(() => {
+    return categories[path].items;
+  }, [path]);
 
-  // Zustand State
-  const [basket, setBasket] = useBasketStore((state) => [
-    state.basket,
-    state.setBasket,
-  ]);
+  const cart = useCartStore((state) => state.cart);
+  console.log(cart)
 
-  console.log(basket)
+  const [selectedProducts, setSelectedProducts] = useState<SelectedProduct[]>([]);
 
   return (
     <div className="container">
       <Search />
       <section className="category">
         <ul role="list" className="category-list">
-          {categoryItems.map((item, idx) => {
-            
+          {categoryItems.map((item) => {
             return (
-              <li className="category-list__item" key={idx}>
-                <img
-                  src={item.img_url}
-                  alt={item.name}
-                  className="item-image"
-                />
-                <div className="details">
-                  <button className="add-notes">
-                    <img src={MessageIcon} alt="Add note" />
-                  </button>
-                  <span className="name">{item.name}</span>
-                  <span className="ingredients">
-                    <p>
-                      {item.ingredients.map((i, idx: number) => (
-                        <React.Fragment key={idx}>
-                          {idx > 0 && ", "}
-
-                          {i}
-                        </React.Fragment>
-                      ))}
-                    </p>
-                  </span>
-                  <span className="price">AZN {item.price.toFixed(2)}</span>
-                  <div className="controls">
-                    <div className="controls__quantity">
-                      <button className="decrease-button">
-                        <img src={MinusIcon} alt="Decrease" />
-                      </button>
-                      <span className="quantity">0</span>
-                      <button className="increase-button">
-                        <img src={PlusIcon} alt="Increase" />
-                      </button>
+              <Drawer.Root key={item.id}>
+                <Drawer.Trigger asChild>
+                    <CategoryListItem item={item} isInModal={false} setSelectedProducts={setSelectedProducts} selectedProducts={selectedProducts} />
+                </Drawer.Trigger>
+                {/* Draggable modal */}
+                <Drawer.Portal>
+                  <Drawer.Overlay className="fixed inset-0 bg-black/40" />
+                  <Drawer.Content className="bg-zinc-100 flex flex-col rounded-t-[10px] mt-24 fixed bottom-0 left-0 right-0">
+                    <div className="p-3 bg-white rounded-t-[10px] flex-1">
+                      <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-accent-100 mb-8" />
+                      <div className="max-w-md mx-auto flex flex-col">
+                        <CategoryListItem item={item} isInModal={true} setSelectedProducts={setSelectedProducts} selectedProducts={selectedProducts} />
+                      </div>
                     </div>
-                    <div className="add-button">
-                      <span>Boşqaba əlavə et</span>
-                    </div>
-                  </div>
-                </div>
-              </li>
+                  </Drawer.Content>
+                </Drawer.Portal>
+              </Drawer.Root>
             );
           })}
         </ul>
