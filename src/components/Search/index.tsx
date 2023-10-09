@@ -47,7 +47,7 @@ const Search: React.FC<SearchProps> = ({setQuery}) => {
       <button className="orders-button" onClick={() => {
         navigate("/cart")
       }}>Sifarişləriniz
-        <span className="count-indicator">{cart.length}</span>
+        {cart.length > 0 && <span className="count-indicator">{cart.length}</span>}
       </button>
     </section>
   );
