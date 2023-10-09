@@ -1,0 +1,213 @@
+.category-list__item {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 40% 1fr;
+  gap: clamp(0.5rem, 3vw, 1.375rem);
+
+  &.inModal {
+    grid-auto-columns: unset;
+    grid-auto-flow: row;
+    grid-auto-rows: 0.5fr 0.5fr;
+
+    img.item-image {
+      max-height: 35vh;
+    }
+
+    .details {
+      .controls {
+        padding-top: 2rem;
+
+        > div {
+          flex-grow: 1;
+          border-radius: 8px;
+
+          font-weight: var(--fw-semi-bold);
+        }
+
+        &__quantity {
+          [role="button"] {
+            width: clamp(25px, 7vw, 32px);
+            aspect-ratio: 1;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          span.quantity {
+            font-size: 25px;
+
+            line-height: 28px;
+          }
+        }
+
+        .add-button {
+          background-color: var(--clr-accent-400);
+          span {
+            font-size: 1.125rem;
+            color: #fff;
+
+            line-height: 28px;
+          }
+        }
+      }
+
+      .info {
+        width: 100%;
+        gap: 1.125rem;
+
+        .price-notes {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .add-notes {
+            all: unset;
+
+            display: grid;
+            grid-auto-flow: column;
+            gap: 8.34px;
+          }
+        }
+
+        .name {
+          font-size: 1.5625rem;
+
+          line-height: 24px;
+        }
+
+        .ingredients {
+          // Prevent limiting the line
+          display: unset;
+          -webkit-line-clamp: unset;
+          -webkit-box-orient: unset;
+          overflow: unset;
+
+          font-size: 1.125rem;
+
+          line-height: 22px;
+        }
+
+        .price {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  img.item-image {
+    border-radius: 0.5rem;
+    object-fit: cover;
+    aspect-ratio: 142 / 97;
+    width: 100%;
+    height: 100%;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: relative;
+
+    .add-notes {
+      all: unset;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+
+      .name {
+        font-size: var(--fs-500);
+
+        line-height: 16px;
+      }
+      .ingredients {
+        font-size: var(--fs-200);
+        font-weight: var(--fw-thin);
+
+        line-height: 14px;
+
+        // set max line
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .price {
+        font-size: var(--fs-300);
+        font-weight: var(--fw-bold);
+        color: var(--clr-accent-400);
+
+        line-height: 12px;
+      }
+    }
+
+    .controls {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      gap: 0.71875rem;
+
+      &__quantity {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 100vmax;
+
+        background-color: var(--clr-neutral-100);
+
+        padding: 0.25rem;
+        gap: clamp(0.25rem, 2vw, 0.75rem);
+
+        span.quantity {
+          font-size: var(--fs-400);
+          font-weight: var(--fw-semi-bold);
+          color: var(--clr-accent-400);
+
+          line-height: 14px;
+        }
+      }
+
+      div[role="button"][aria-disabled="true"] {
+        pointer-events: none;
+        opacity: .5;
+      }
+
+      .add-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100vmax;
+
+        background-color: var(--clr-neutral-100);
+        padding: 0.25rem 0.5rem;
+
+        span {
+          font-size: var(--fs-300);
+          font-weight: var(--fw-semi-bold);
+          color: var(--clr-accent-400);
+
+          line-height: 14px;
+        }
+      }
+    }
+  }
+}
