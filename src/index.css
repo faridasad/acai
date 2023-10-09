@@ -25,10 +25,9 @@
   --max-width: 1000px;
   --padding: .6875rem;
 
-  width: min(var(--max-width), 100% - var(--padding) * 2);
+  width: min(var(--max-width), 100% - var(--padding) * 2) !important; /* !important because of overwrite stuff by tailwind */
   margin-inline: auto;
 }
-
 
 
 /* CSS RESET */
@@ -99,3 +98,7 @@ svg {
     scroll-behavior: auto !important;
   }
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
