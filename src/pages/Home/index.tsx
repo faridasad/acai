@@ -16,7 +16,7 @@ export interface CustomCSS extends CSSProperties {
 
 const Home = () => {
 
-  const [query, setQuery] = useState("")
+  const [query, setQuery] = useState<string>("")
 
   const filteredItems = HomeData.categories.items.filter((c) => c.name.toLowerCase().includes(query.toLowerCase()))
 
