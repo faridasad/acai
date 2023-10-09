@@ -3,10 +3,21 @@ import "./search.scss";
 import SearchIcon from "../../assets/images/icon-search.svg";
 import CloseIcon from "../../assets/images/icon-close.svg";
 
-import { useState } from "react";
+import React, { useState } from "react";
 
-const Search = () => {
+import { useNavigate } from "react-router-dom";
+import useCartStore from "../../store/CartStore";
+
+
+interface SearchProps {
+  setQuery: React.Dispatch<React.SetStateAction<string>>
+}
+
+const Search: React.FC<SearchProps> = ({setQuery}) => {
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const cart = useCartStore(state => state.cart)
 
   return (
     <section className={"search" + (isSearchBarOpen === true ? " active" : "")}>
@@ -21,7 +32,8 @@ const Search = () => {
         <div className="search__bar">
           <input
             type="text"
-            placeholder="Salat axtar..."
+            placeholder="Kateqoriya axtar..."
+            onChange={(e) => setQuery(e.target.value)}
           />
           <img
             src={CloseIcon}
@@ -32,7 +44,11 @@ const Search = () => {
           />
         </div>
       </button>
-      <button className="orders-button">Sifarişləriniz</button>
+      <button className="orders-button" onClick={() => {
+        navigate("/cart")
+      }}>Sifarişləriniz
+        <span className="count-indicator">{cart.length}</span>
+      </button>
     </section>
   );
 };

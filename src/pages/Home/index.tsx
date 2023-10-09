@@ -6,7 +6,7 @@ import HomeSlider from "../../components/HomeSlider";
 import Search from "../../components/Search";
 
 import "./home.scss";
-import { CSSProperties } from "react";
+import { CSSProperties, useState } from "react";
 import { Link } from "react-router-dom";
 
 // Types
@@ -15,11 +15,16 @@ export interface CustomCSS extends CSSProperties {
 }
 
 const Home = () => {
+
+  const [query, setQuery] = useState("")
+
+  const filteredItems = HomeData.categories.items.filter((c) => c.name.toLowerCase().includes(query.toLowerCase()))
+
   return (
     <div className="home">
       <HomeSlider items={HomeData.slider.items} />
       <div className="container">
-        <Search />
+        <Search setQuery={setQuery} />
         <section className="categories">
           <ul
             role="list"
@@ -30,7 +35,7 @@ const Home = () => {
               } as CustomCSS
             }
           >
-            {HomeData.categories.items.map((c, idx) => {
+            {filteredItems.map((c, idx) => {
               return (
                 <Link to={`/${c.href}`} key={idx}>
                   <li className="category-item">

@@ -64,5 +64,23 @@ section.search {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+
+    span {
+      width: 20px;
+      height: 20px;
+      font-size: var(--fs-500);
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: -7px;
+      right: 15px;
+      background-color: var(--clr-accent-400);
+      color: #fff;;
+      border-radius: 50%;
+      line-height: 1.5;
+    }
   }
 }
