@@ -1,4 +1,4 @@
-import React, { LiHTMLAttributes, forwardRef, useState } from "react";
+import React, { LiHTMLAttributes, forwardRef } from "react";
 
 import "./category-list-item.scss";
 
