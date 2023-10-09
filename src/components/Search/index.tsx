@@ -10,7 +10,7 @@ import useCartStore from "../../store/CartStore";
 
 
 interface SearchProps {
-  setQuery: React.Dispatch<React.SetStateAction<string>>
+  setQuery?: React.Dispatch<React.SetStateAction<string>>
 }
 
 const Search: React.FC<SearchProps> = ({setQuery}) => {
@@ -33,7 +33,7 @@ const Search: React.FC<SearchProps> = ({setQuery}) => {
           <input
             type="text"
             placeholder="Kateqoriya axtar..."
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => setQuery && setQuery(e.target.value)}
           />
           <img
             src={CloseIcon}
