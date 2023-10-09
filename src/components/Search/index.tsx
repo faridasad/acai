@@ -10,7 +10,7 @@ import useCartStore from "../../store/CartStore";
 
 
 interface SearchProps {
-  setQuery: React.Dispatch<React.SetStateAction<string>>
+  setQuery: any;
 }
 
 const Search: React.FC<SearchProps> = ({setQuery}) => {
