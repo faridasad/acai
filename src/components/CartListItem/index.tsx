@@ -1,4 +1,4 @@
-import React, { LiHTMLAttributes, forwardRef } from "react";
+import { LiHTMLAttributes, forwardRef } from "react";
 
 // Assets
 import MinusIcon from "../../assets/images/icon-minus.svg";
@@ -21,13 +21,12 @@ interface ListItemProps {
 interface ListItemProps extends LiHTMLAttributes<HTMLLIElement> {}
 
 const CartListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, ...props }, ref) => {
-    const [cart, addToCart, removeFromCart, decreaseCartProduct, updateNotes] =
+    const [cart, addToCart, removeFromCart, decreaseCartProduct] =
       useCartStore((state) => [
         state.cart,
         state.addToCart,
         state.removeFromCart,
         state.decreaseCartProduct,
-        state.updateNotes,
       ]);
 
     const cartItem = cart.find(p => p.id === item.id)
