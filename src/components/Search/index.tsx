@@ -9,11 +9,8 @@ import { useNavigate } from "react-router-dom";
 import useCartStore from "../../store/CartStore";
 
 
-interface SearchProps {
-  setQuery: any;
-}
 
-const Search: React.FC<SearchProps> = ({setQuery}) => {
+const Search = ({setQuery} : any) => {
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const navigate = useNavigate();
 
