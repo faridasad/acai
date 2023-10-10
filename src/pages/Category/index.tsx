@@ -55,7 +55,7 @@ const Category: React.FC<CategoryProps> = () => {
                   <Drawer.Content className="bg-zinc-100 flex flex-col rounded-t-[10px] mt-24 fixed bottom-0 left-0 right-0">
                     <div className="p-3 bg-white rounded-t-[10px] flex-1">
                       <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-accent-100 mb-8" />
-                      <div className="max-w-md mx-auto flex flex-col">
+                      <div className="max-w-xl mx-auto flex flex-col">
                         <CategoryListItem item={item} isInModal={true} setSelectedProducts={setSelectedProducts} selectedProducts={selectedProducts} />
                       </div>
                     </div>
