@@ -1,13 +1,17 @@
+// React and Hooks
 import React, { LiHTMLAttributes, forwardRef } from "react";
+import useCartStore from "../../store/CartStore";
 
-import "./category-list-item.scss";
+// Components and Pages
+// *
 
-// Assets
+// Assets and Styles
 import MinusIcon from "../../assets/images/icon-minus.svg";
 import PlusIcon from "../../assets/images/icon-plus.svg";
-import MessageIcon from "../../assets/images/icon-message.svg";
-import useCartStore from "../../store/CartStore";
-import { SelectedProduct } from "../../pages/Category";
+import "./category-list-item.scss";
+
+// Types
+import type { SelectedProduct } from "../../pages/Category";
 
 interface ListItemProps {
   isInModal: boolean;
@@ -24,12 +28,11 @@ interface ListItemProps {
 
 interface ListItemProps extends LiHTMLAttributes<HTMLLIElement> {}
 
+
 const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInModal, setSelectedProducts, selectedProducts, ...props }, ref) => {
-
-
     const addToCart = useCartStore((state) => state.addToCart);
 
-    const product = selectedProducts.find(p => p.id === item.id);
+    const product = selectedProducts.find((p) => p.id === item.id);
     const productQuantity = product?.quantity || 0;
 
     const handleCartUpdate = () => {
@@ -41,7 +44,7 @@ const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInM
         ingredients: item.ingredients,
       };
 
-      if(productQuantity === 0 || productQuantity === undefined) return;
+      if (productQuantity === 0 || productQuantity === undefined) return;
 
       addToCart(product, productQuantity);
 
@@ -68,16 +71,16 @@ const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInM
     };
 
     const decreaseSelectedProductQuantity = (_id: number) => {
-      const product = selectedProducts.find((p: any) => p.id === _id)
+      const product = selectedProducts.find((p: any) => p.id === _id);
 
-      if(!product || product.quantity === 0) return;
+      if (!product || product.quantity === 0) return;
 
       const updatedProducts = selectedProducts.map((p: any) =>
         p.id === _id ? { id: p.id, quantity: p.quantity - 1 } : p
       );
 
-      setSelectedProducts(updatedProducts)
-    }
+      setSelectedProducts(updatedProducts);
+    };
 
     return (
       <li
@@ -87,11 +90,6 @@ const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInM
       >
         <img src={item.img_url} alt={item.name} className="item-image" />
         <div className="details">
-          {!isInModal && (
-            <div role="button" tabIndex={0} className="add-notes">
-              <img src={MessageIcon} alt="Add note" />
-            </div>
-          )}
           <div className="info">
             <span className="name">{item.name}</span>
             <span className="ingredients">
@@ -105,17 +103,8 @@ const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInM
                 ))}
               </p>
             </span>
-            {isInModal ? (
-              <div className="price-notes">
-                <span className="price">AZN {item.price.toFixed(2)}</span>
-                <div role="button" tabIndex={0} className="add-notes">
-                  <img src={MessageIcon} alt="Add note" />
-                  <span>Mətbəxə şərh əlavə edin</span>
-                </div>
-              </div>
-            ) : (
-              <span className="price">AZN {item.price.toFixed(2)}</span>
-            )}
+
+            <span className="price">AZN {item.price.toFixed(2)}</span>
           </div>
           <div className="controls">
             <div className="controls__quantity">
@@ -127,10 +116,10 @@ const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInM
                 onClick={(e) => {
                   e.stopPropagation();
                   productQuantity !== 0 &&
-                    decreaseSelectedProductQuantity(item.id)
+                    decreaseSelectedProductQuantity(item.id);
                 }}
               >
-                <img src={MinusIcon} alt="Decrease" />
+                <img loading="lazy" src={MinusIcon} alt="Decrease" />
               </div>
               <span className="quantity">
                 {selectedProducts.find((p: any) => p.id === item.id)

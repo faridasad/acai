@@ -22,6 +22,7 @@ interface CartActions {
   removeFromCart: (product: Product) => void;
   decreaseCartProduct: (product: Product) => void;
   updateNotes: (_id: number, notes: string) => void;
+  resetCart: () => void;
 }
 
 const INITIAL_STATE: CartState = {
@@ -46,7 +47,7 @@ const useCartStore = create<CartState & CartActions>()(
           set((state) => ({
             cart: updatedCart,
             totalItems: state.totalItems + 1,
-            totalPrice: state.totalPrice + product.price,
+            totalPrice: state.totalPrice + product.price * quantity,
           }));
           return;
         }
@@ -56,17 +57,19 @@ const useCartStore = create<CartState & CartActions>()(
             ? { ...item, quantity: (item.quantity as number) + quantity }
             : item
         );
+        console.log(product.price, quantity);
         set((state) => ({
           cart: updatedCart,
           totalItems: state.totalItems + 1,
-          totalPrice: state.totalPrice + product.price,
+          totalPrice: state.totalPrice + product.price * quantity,
         }));
       },
       removeFromCart: (product: Product) => {
         set((state) => ({
           cart: state.cart.filter((item) => item.id !== product.id),
           totalItems: state.totalItems - 1,
-          totalPrice: state.totalPrice - product.price,
+          totalPrice: (state.totalPrice -
+            product.price * product.quantity!) as number,
         }));
       },
       decreaseCartProduct: (product: Product) => {
@@ -97,8 +100,15 @@ const useCartStore = create<CartState & CartActions>()(
           totalPrice: state.totalPrice,
         }));
       },
+      resetCart: () => {
+        set(() => ({
+          cart: [],
+          totalItems: 0,
+          totalPrice: 0,
+        }));
+      },
     }),
-    { name: "cart-items" }
+    { name: "cart-store" }
   )
 );
 

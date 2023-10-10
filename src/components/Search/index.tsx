@@ -1,23 +1,25 @@
-// Components and styles
-import "./search.scss";
-import SearchIcon from "../../assets/images/icon-search.svg";
-import CloseIcon from "../../assets/images/icon-close.svg";
-
+// React and Hooks
 import React, { useState } from "react";
-
 import { useNavigate } from "react-router-dom";
 import useCartStore from "../../store/CartStore";
 
+// Components and Pages
+import SearchIcon from "../../assets/images/icon-search.svg";
+import CloseIcon from "../../assets/images/icon-close.svg";
 
+// Assets and styles
+import "./search.scss";
+
+// Types
 interface SearchProps {
-  setQuery?: React.Dispatch<React.SetStateAction<string>>
+  setQuery?: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Search: React.FC<SearchProps> = ({setQuery}) => {
+const Search: React.FC<SearchProps> = ({ setQuery }) => {
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
-  const navigate = useNavigate();
 
-  const cart = useCartStore(state => state.cart)
+  const cart = useCartStore((state) => state.cart);
+  const navigate = useNavigate();
 
   return (
     <section className={"search" + (isSearchBarOpen === true ? " active" : "")}>
@@ -44,10 +46,16 @@ const Search: React.FC<SearchProps> = ({setQuery}) => {
           />
         </div>
       </button>
-      <button className="orders-button" onClick={() => {
-        navigate("/cart")
-      }}>Sifarişləriniz
-        {cart.length > 0 && <span className="count-indicator">{cart.length}</span>}
+      <button
+        className="orders-button"
+        onClick={() => {
+          navigate("/cart");
+        }}
+      >
+        Sifarişləriniz
+        {cart.length > 0 && (
+          <span className="count-indicator">{cart.length}</span>
+        )}
       </button>
     </section>
   );

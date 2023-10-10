@@ -1,9 +1,16 @@
-import "./error.scss"
-import ErrorImage from "../../assets/images/404.svg"
+// React and Hooks
+import { useNavigate } from "react-router-dom";
 
-import { useNavigate} from "react-router-dom"
+// Components and Pages
+// *
 
- 
+// Assets and Styles
+import "./error.scss";
+import ErrorImage from "../../assets/images/404.svg";
+
+// Types
+// *
+
 const Error: React.FC = () => {
   const navigate = useNavigate();
 
@@ -13,7 +20,7 @@ const Error: React.FC = () => {
       <span>Page Not Found</span>
       <button onClick={() => navigate("/")}>Home Page</button>
     </section>
-  )
-}
+  );
+};
 
-export default Error
+export default Error;

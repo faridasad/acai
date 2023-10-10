@@ -1,3 +1,10 @@
+// React and Hooks
+// *
+
+// Components and Pages
+// *
+
+// Assets and Styles
 import "./home_slider.scss";
 
 // Types
@@ -8,7 +15,7 @@ interface HomeSliderProps {
   }[];
 }
 
-const HomeSlider: React.FC<HomeSliderProps> = ({items}) => {
+const HomeSlider: React.FC<HomeSliderProps> = ({ items }) => {
   return (
     <section
       className="home-slider"

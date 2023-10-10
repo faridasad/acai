@@ -1,27 +1,30 @@
 // React and Hooks
 import React, { useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
-import useCartStore from "../../store/CartStore";
 
-// Components and Styles
+// Components and Pages
 import Search from "../../components/Search";
-import CategoryData from "../../data/categories.json";
 import CategoryListItem from "../../components/CategoryListItem";
 import Error from "../Error";
 import { Drawer } from "vaul";
 
+// Assets and Styles
 import "./category.scss";
 
+// Dummy Data 
+import CategoryData from "../../data/categories.json";
 
+// Types
 export interface SelectedProduct {
   id: number,
   quantity: number;
 }
 
-
 interface CategoryProps {}
 
 const Category: React.FC<CategoryProps> = () => {
+
+  // Get Dummy Data and Check its existence For Each Category From the JSON File (used Salads just for the Types Definition)
   const { pathname } = useLocation();
   const path = pathname.split("/")[1];
   const categories: { [key: string]: typeof CategoryData.categories.salads } =
@@ -32,9 +35,6 @@ const Category: React.FC<CategoryProps> = () => {
   const categoryItems = useMemo(() => {
     return categories[path].items;
   }, [path]);
-
-  const cart = useCartStore((state) => state.cart);
-  console.log(cart)
 
   const [selectedProducts, setSelectedProducts] = useState<SelectedProduct[]>([]);
 
