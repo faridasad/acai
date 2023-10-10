@@ -1,0 +1,46 @@
+section.order-page {
+  padding-top: 2rem;
+  height: 100vh;
+  height: 100dvh; // overwrite if possible
+
+  background: linear-gradient(
+    180deg,
+    #542d83 0%,
+    rgba(62, 1, 135, 0.67) 46.16%,
+    rgba(106, 2, 132, 0.61) 100%
+  );
+  backdrop-filter: blur(14px);
+
+  .info {
+    padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img.order-image {
+        width: max(300px, 50%);
+        aspect-ratio: 1;
+        object-fit: cover;
+
+        animation: illustrate 3s infinite alternate;
+    }
+
+    @keyframes illustrate {
+      to {
+        translate: 0 -5%;
+        rotate: 5deg;
+      }
+    }
+
+    .text {
+        color: #fff;
+        text-align: center;
+
+        h1 {
+            font-size: 30px;
+            font-weight: var(--fw-semi-bold);
+        }
+    }
+  }
+}
