@@ -162,3 +162,39 @@
     }
   }
 }
+
+.modal-notes {
+  h2 {
+    font-size: 1.25rem;
+    font-weight: var(--fw-bold);
+  }
+  &__inner {
+    padding-top: 2rem;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      li {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 40% 1fr;
+
+        span {
+          max-width: 90%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        textarea {
+          resize: none;
+          border: 1px solid var(--clr-neutral-100);
+          border-radius: 8px;
+          padding: 0.25rem;
+        }
+      }
+    }
+  }
+}
