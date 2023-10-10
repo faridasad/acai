@@ -141,6 +141,7 @@ const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInM
               role="button"
               tabIndex={0}
               className="add-button"
+              aria-disabled={product?.quantity === 0}
               onClick={(e) => {
                 e.stopPropagation();
                 handleCartUpdate();
