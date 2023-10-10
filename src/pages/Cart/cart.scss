@@ -1,4 +1,12 @@
 .cart {
+
+  h1 {
+    text-align: center;
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    font-weight: var(--fw-bold);
+    padding-block: 1.5rem;
+  }
+
   .cart-products-list {
     display: grid;
     grid-template-columns: 1fr;
@@ -144,6 +152,11 @@
     background-color: var(--clr-accent-400);
     padding-block: 10px;
     margin-block: 24px;
+
+    &:disabled {
+      pointer-events: none;
+      opacity: .7;
+    }
 
     span {
       color: #f6edff;

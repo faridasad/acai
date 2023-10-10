@@ -18,20 +18,23 @@ const Cart: React.FC<CartProps> = () => {
     state.cart,
     state.totalPrice,
     state.updateNotes,
-    state.resetCart
+    state.resetCart,
   ]);
 
   const navigate = useNavigate();
 
-
   return (
     <section className="cart">
       <div className="container">
-        <ul role="list" className="cart-products-list">
-          {cart.map((item) => {
-            return <CartListItem item={item} key={item.id} />;
-          })}
-        </ul>
+        {cart.length > 0 ? (
+          <ul role="list" className="cart-products-list">
+            {cart.map((item) => {
+              return <CartListItem item={item} key={item.id} />;
+            })}
+          </ul>
+        ) : (
+          <h1>Səbətiniz Boşdur 🛒</h1>
+        )}
         <div className="total-price">
           <span>
             Yekun məbləğ{" "}
@@ -60,20 +63,28 @@ const Cart: React.FC<CartProps> = () => {
                   <div className="modal-notes">
                     <h2>Notes</h2>
                     <div className="modal-notes__inner">
-                        <ul role="list">
-                          {cart.map(c => {
-                            return (
-                              <li key={c.id}>
-                                <span>{c.name}</span>
-                                <textarea name="" id="" value={c.notes && c.notes} placeholder={!c.notes ? "İstək əlavə edin.." : ""} onChange={(e) => {
-                                  updateNotes(c.id, e.target.value)
-                                }}>
-                                  {c.notes && c.notes}
-                                </textarea>
-                              </li>
-                            )
-                          })}
-                        </ul>
+                      <ul role="list">
+                        {cart.map((c) => {
+                          return (
+                            <li key={c.id}>
+                              <span>{c.name}</span>
+                              <textarea
+                                name=""
+                                id=""
+                                value={c.notes && c.notes}
+                                placeholder={
+                                  !c.notes ? "İstək əlavə edin.." : ""
+                                }
+                                onChange={(e) => {
+                                  updateNotes(c.id, e.target.value);
+                                }}
+                              >
+                                {c.notes && c.notes}
+                              </textarea>
+                            </li>
+                          );
+                        })}
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -82,19 +93,22 @@ const Cart: React.FC<CartProps> = () => {
           </Drawer.Portal>
         </Drawer.Root>
       </div>
-      <button className="order-button" onClick={() => {
-        if(cart.length <= 0) return;
+      <button
+        className="order-button"
+        disabled={cart.length <= 0}
+        onClick={() => {
+          if (cart.length <= 0) return;
 
-        //    API CALL   //
-        //               //
-        //               //
-        //               //
-        //  //  //  //   //
+          //    API CALL   //
+          //               //
+          //               //
+          //               //
+          //  //  //  //   //
 
-
-        resetCart();
-        navigate("/order")
-      }}>
+          resetCart();
+          navigate("/order");
+        }}
+      >
         <span>Sifariş Et</span>
       </button>
       <div className="container">
