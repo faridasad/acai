@@ -12,6 +12,7 @@ import "./category-list-item.scss";
 
 // Types
 import type { SelectedProduct } from "../../pages/Category";
+import { Drawer } from "vaul";
 
 interface ListItemProps {
   isInModal: boolean;
@@ -27,7 +28,6 @@ interface ListItemProps {
 }
 
 interface ListItemProps extends LiHTMLAttributes<HTMLLIElement> {}
-
 
 const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInModal, setSelectedProducts, selectedProducts, ...props }, ref) => {
     const addToCart = useCartStore((state) => state.addToCart);
@@ -52,6 +52,7 @@ const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInM
         (p: any) => p.id !== item.id
       );
       setSelectedProducts(updatedProducts);
+      document.body.style.position = "unset"
     };
 
     const increaseSelectedProductQuantity = (_id: number) => {
@@ -137,18 +138,21 @@ const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInM
                 <img src={PlusIcon} alt="Increase" />
               </div>
             </div>
-            <div
-              role="button"
-              tabIndex={0}
-              className="add-button"
-              aria-disabled={product?.quantity === 0}
-              onClick={(e) => {
-                e.stopPropagation();
-                handleCartUpdate();
-              }}
-            >
-              <span>Boşqaba əlavə et</span>
-            </div>
+            
+              <div
+                role="button"
+                tabIndex={0}
+                className="add-button"
+                aria-disabled={product?.quantity === 0}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleCartUpdate();
+                }}
+              >
+                <Drawer.Close asChild>
+                <span>Boşqaba əlavə et</span>
+                </Drawer.Close>
+              </div>
           </div>
         </div>
       </li>
