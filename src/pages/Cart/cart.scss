@@ -45,7 +45,7 @@
           gap: 0.5rem;
 
           .name {
-            font-size: 15px;
+            font-size: clamp(.9rem, 3vw, 1.5rem);
             font-weight: var(--fw-semi-bold);
 
             line-height: 18px;
@@ -53,7 +53,7 @@
 
           .price {
             width: 100%;
-            font-size: 15px;
+            font-size: clamp(1rem, 5vw, 1.5rem);
             font-weight: var(--fw-bold);
             color: var(--clr-accent-400);
             text-align: right;
@@ -109,10 +109,10 @@
   }
 
   .total-price {
-    padding-block: 1.5rem;
+    padding-block: 2rem;
 
     span {
-      font-size: var(--fs-600);
+      font-size: clamp(var(--fs-600), 5vw, 1.5rem);
 
       line-height: 18px;
       .price {
@@ -172,6 +172,13 @@
       font-weight: var(--fw-semi-bold);
 
       line-height: 24px;
+    }
+
+    .suggested-products-list {
+      display: flex;
+      flex-direction: column;
+      padding-block: 2rem;
+      gap: 1rem;
     }
   }
 }
