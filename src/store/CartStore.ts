@@ -57,7 +57,7 @@ const useCartStore = create<CartState & CartActions>()(
             ? { ...item, quantity: (item.quantity as number) + quantity }
             : item
         );
-        console.log(product.price, quantity);
+        
         set((state) => ({
           cart: updatedCart,
           totalItems: state.totalItems + 1,
