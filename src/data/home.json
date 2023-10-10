@@ -24,62 +24,62 @@
       {
         "href": "breakfast",
         "name": "Qəlyanaltılar",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818808303824977/qelyanalti.png"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354435436478464/qelyanalti.webp"
       },
       {
         "href": "salads",
         "name": "Salatlar",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818808580657173/salat.png"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354436258582538/salat.webp"
       },
       {
         "href": "soups",
         "name": "Şorbalar",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818847688347678/sorba.png"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354485302575134/sorba.webp"
       },
       {
         "href": "main-dishes",
         "name": "Əsas Yeməklər",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818806890348574/esas_yemek.png"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354433507119114/esas_yemek.webp"
       },
       {
         "href": "shawarma",
         "name": "Şaurmalar",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818847394738187/saurma.png"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354484933472266/saurma.webp"
       },
       {
         "href": "doners",
         "name": "Dönərlər",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818806689026058/doner.png"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354433108643910/doner.webp"
       },
       {
         "href": "burgers",
         "name": "Burgerlər",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818805971796008/burger.png"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354432005558402/burger.webp"
       },
       {
         "href": "pizzas",
         "name": "Pizzalar",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818807989260288/pizza.png"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354435079983134/pizza.webp"
       },
       {
         "href": "lahmacuns",
         "name": "Lahmacunlar",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818807443996703/lahmacun.png"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354434304036874/lahmacun.webp"
       },
       {
         "href": "pides",
         "name": "Pidelər",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818807725011014/pide.png"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354434664726598/pide.webp"
       },
       {
         "href": "drinks",
         "name": "İçkilər",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818807175557233/icki.jpeg"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354433968476281/icki.webp"
       },
       {
         "href": "desserts",
         "name": "Desertlər",
-        "img_url": "https://cdn.discordapp.com/attachments/1041418563136790558/1159818806437359657/desert.jpeg"
+        "img_url": "https://cdn.discordapp.com/attachments/1161350026837110864/1161354432483688609/desert.webp"
       }
     ]
   }

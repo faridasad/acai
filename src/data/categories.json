@@ -8,7 +8,7 @@
           "name": "İngilis Salatı",
           "ingredients": ["Göbələk", "toyuq əti", "xiyar", "mayonez"],
           "price": 5.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088712395358228/0d3e6ddeb71f47297ea34f04a04803b3.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161355743795105953/1161355803425521704/ingilis_salati"
         },
         {
           "id": 2,
@@ -22,14 +22,14 @@
             "zeytun yağı"
           ],
           "price": 5.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088714509295626/6420da3d5d521da0c8cf656ecbf0d9d0.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161355743795105953/1161355805493313816/toyuq_salati_yagda.webp"
         },
         {
           "id": 3,
           "name": "Çoban Salatı",
           "ingredients": ["Pomidor", "xiyar", "göyərti", "zeytun yağı"],
           "price": 5.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088713741742080/5fe81336c2f1dd6ec5a1ba5bab66edfd.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161355743795105953/1161355802397913128/coban_salati.webp"
         },
         {
           "id": 4,
@@ -44,28 +44,28 @@
             "mayonez"
           ],
           "price": 6.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088714123411456/84e9c9af9a5b9c60bfccfd9127b7f1bf.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161355743795105953/1161355803849142331/mimoza_salati.webp"
         },
         {
           "id": 5,
           "name": "Paytaxt Salatı",
           "ingredients": ["Kartof", "kök", "yumurta", "xiyar", "yaşıl noxud"],
           "price": 5.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088712701554698/0d4fdd187f03b06c24a99170de176f7c.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161355743795105953/1161355804197265610/paytaxt_salati.webp"
         },
         {
           "id": 6,
           "name": "Əzmə badımcan Salatı",
           "ingredients": ["Badımcan", "pomidor", "bibər", "sarımsaq"],
           "price": 5.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088714819678218/e604903749002124d47705c7744dcd53.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161355743795105953/1161355802905419856/ezme_badimcan_salati.webp"
         },
         {
           "id": 7,
           "name": "Qarğıdalı Salatı",
           "ingredients": ["Qarğıdalı", "yumurta", "kök", "xiyar", "mayonez"],
           "price": 5.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088713448128553/4a3f405a13a240bfe265d9f65a4dfba8.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161355743795105953/1161355804637675593/qargidali_salati.webp"
         },
         {
           "id": 8,
@@ -79,7 +79,7 @@
             "mayonez"
           ],
           "price": 5.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160088458921005086/1160088713448128553/4a3f405a13a240bfe265d9f65a4dfba8.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161355743795105953/1161355805069684847/suba_salati.webp"
         }
       ]
     },
@@ -91,7 +91,7 @@
           "name": "Mərcimək Şorbası",
           "ingredients": ["Mərci", "kök", "soğan", "quru nanə"],
           "price": 4.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120595938295878/137d38887df73222182442e4a35addb6.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161356483808727041/1161356531032395816/mercimek_sorba.webp"
         },
         {
           "id": 10,
@@ -106,28 +106,28 @@
             "cəfəri"
           ],
           "price": 5.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120597255311391/c274dad235ef989942ec54a907fe7528.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161356483808727041/1161356531749617746/toyuq_sorba.webp"
         },
         {
           "id": 11,
           "name": "Doğramac",
           "ingredients": ["Qatıq", "xiyar", "göyərti"],
           "price": 4.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120596219305996/7166bd1505fbff68c505d8403e8ecb85.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161356483808727041/1161356529925099674/dogramac.webp"
         },
         {
           "id": 12,
           "name": "Tomat Şorbası",
           "ingredients": ["Tomat", "qaymaq", "holland pendiri"],
           "price": 6.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120596538085397/a07aa78adc850e64caf7578c55c5fde4.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161356483808727041/1161356531397304421/tomat_sorba.webp"
         },
         {
           "id": 13,
           "name": "Göbələk Şorbası",
           "ingredients": ["Göbələk", "süd", "qaymaq", "un", "soğan"],
           "price": 5.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120596877819994/c64d9048be729125b072f4629d1cc31d.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161356483808727041/1161356530612961501/gobelek_sorba.webp"
         },
         {
           "id": 14,
@@ -142,14 +142,14 @@
             "kərə yağı"
           ],
           "price": 5.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120595321724999/12f6b8af96b337bdff50f2ba6011e6bc.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161356483808727041/1161356532139692153/yayla_sorba.webp"
         },
         {
           "id": 15,
           "name": "Dovğa",
           "ingredients": ["Qatıq", "yumurta", "düyü", "göyərti", "noxud"],
           "price": 4.0,
-          "img_url": "https://cdn.discordapp.com/attachments/1160119022831009823/1160120595653087282/91a7242c21cc31ad934b14a084d689b9.png"
+          "img_url": "https://cdn.discordapp.com/attachments/1161356483808727041/1161356530256453734/dovga.webp"
         }
       ]
     }
