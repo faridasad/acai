@@ -15,6 +15,7 @@ import "./cart.scss";
 import CategoryListItem from "../../components/CategoryListItem";
 import { useState } from "react";
 import { SelectedProduct } from "../Category";
+import useKitchenStore, { Order } from "../../store/KitchenStore";
 
 // Types
 interface CartProps {}
@@ -26,6 +27,9 @@ const Cart: React.FC<CartProps> = () => {
     state.updateNotes,
     state.resetCart,
   ]);
+
+  const [addOrder] = useKitchenStore((state) => [state.addOrder]);
+
   const categories = CategoriesData.categories;
 
   const allProducts = [...categories.salads.items, ...categories.soups.items];
@@ -38,7 +42,7 @@ const Cart: React.FC<CartProps> = () => {
       cartIngredients.some((ingredient) => {
         if (ingredient === undefined) return;
 
-        return product.ingredients.includes(ingredient)
+        return product.ingredients.includes(ingredient);
       }) &&
       // Check if the product is not already in the cart.
       !cart.some((cartItem) => cartItem.id === product.id)
@@ -46,7 +50,28 @@ const Cart: React.FC<CartProps> = () => {
   });
 
   const navigate = useNavigate();
-  const [selectedProducts, setSelectedProducts] = useState<SelectedProduct[]>([]);
+  const [selectedProducts, setSelectedProducts] = useState<SelectedProduct[]>(
+    []
+  );
+
+  const handleOrderSubmit = () => {
+    if (cart.length <= 0) return;
+
+    //    API CALL   //
+    //               //
+    //               //
+    //               //
+    //  //  //  //   //
+
+    const order: Order = {
+      id: Math.floor(Math.random() * 100000),
+      items: cart
+    }
+
+    resetCart();
+    addOrder(order);
+    navigate("/order");
+  };
 
   return (
     <section className="cart">
@@ -121,18 +146,7 @@ const Cart: React.FC<CartProps> = () => {
       <button
         className="order-button"
         disabled={cart.length <= 0}
-        onClick={() => {
-          if (cart.length <= 0) return;
-
-          //    API CALL   //
-          //               //
-          //               //
-          //               //
-          //  //  //  //   //
-
-          resetCart();
-          navigate("/order");
-        }}
+        onClick={handleOrderSubmit}
       >
         <span>Sifariş Et</span>
       </button>

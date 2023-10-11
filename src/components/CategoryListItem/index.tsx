@@ -29,7 +29,11 @@ interface ListItemProps {
 
 interface ListItemProps extends LiHTMLAttributes<HTMLLIElement> {}
 
-const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInModal, setSelectedProducts, selectedProducts, ...props }, ref) => {
+const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(
+  (
+    { item, isInModal, setSelectedProducts, selectedProducts, ...props },
+    ref
+  ) => {
     const addToCart = useCartStore((state) => state.addToCart);
 
     const product = selectedProducts.find((p) => p.id === item.id);
@@ -52,7 +56,7 @@ const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInM
         (p: any) => p.id !== item.id
       );
       setSelectedProducts(updatedProducts);
-      document.body.style.position = "unset"
+      document.body.style.position = "unset";
     };
 
     const increaseSelectedProductQuantity = (_id: number) => {
@@ -138,21 +142,19 @@ const CategoryListItem = forwardRef<HTMLLIElement, ListItemProps>(({ item, isInM
                 <img src={PlusIcon} alt="Increase" />
               </div>
             </div>
-            
-              <div
-                role="button"
-                tabIndex={0}
-                className="add-button"
-                aria-disabled={product?.quantity === 0}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleCartUpdate();
-                }}
-              >
-                <Drawer.Close asChild>
+
+            <div
+              role="button"
+              tabIndex={0}
+              className="add-button"
+              aria-disabled={product?.quantity === 0}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleCartUpdate();
+              }}
+            >
                 <span>Boşqaba əlavə et</span>
-                </Drawer.Close>
-              </div>
+            </div>
           </div>
         </div>
       </li>

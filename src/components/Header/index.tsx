@@ -1,5 +1,5 @@
 // React and Hooks
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 // Components and Pages
 // *
@@ -17,9 +17,13 @@ const Header: React.FC<HeaderProps> = () => {
   const navigate = useNavigate();
 
   return (
-    <header className={`${pathname === "/" ? "home" : ""}`}>
-      {pathname === "/" ? (
-        <img src={LogoImage} alt="Logo" />
+    <header
+      className={`${pathname === "/" || pathname === "/kitchen" ? "home" : ""}`}
+    >
+      {pathname === "/" || pathname === "/kitchen" ? (
+        <Link to="/">
+          <img src={LogoImage} alt="Logo" />
+        </Link>
       ) : (
         <div className="container">
           <div className="controls">

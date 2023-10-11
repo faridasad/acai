@@ -12,6 +12,7 @@ import Order from "./pages/Order";
 
 // Assets and Styles
 import "./App.scss";
+import Kitchen from "./pages/Kitchen";
 
 // Types
 // *
@@ -20,9 +21,11 @@ function App() {
   const Layout = () => {
     const { pathname } = useLocation();
 
+    const headerNeededPages = ["/order"]
+
     return (
       <>
-        {pathname !== "/order" && <Header />}
+        {!headerNeededPages.includes(pathname) && <Header />}
         <main>
           <Outlet />
         </main>
@@ -39,6 +42,7 @@ function App() {
         { path: "/:category", element: <Category /> },
         { path: "/cart", element: <Cart /> },
         { path: "/order", element: <Order /> },
+        { path: "/kitchen", element: <Kitchen /> },
         { path: "*", element: <Error /> },
       ],
     },
