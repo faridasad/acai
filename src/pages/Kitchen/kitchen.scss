@@ -1,0 +1,115 @@
+section.kitchen {
+    padding-block: 1rem;
+    h1 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        text-align: center;
+
+        padding-block: 2rem;
+    }
+
+    h2.info {
+        font-size: clamp(1.25rem, 5vw, 1.5rem);
+
+        color: var(--clr-accent-400);
+    }
+
+    .kitchen__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button.button-reset {
+            background-color: var(--clr-accent-100);
+            color: var(--clr-accent-400);
+            width: fit-content;
+            border-radius: .5rem;
+            padding: .5rem 1rem;
+        }
+    }
+
+  .kitchen-orders-list {
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    li {
+      position: relative;
+
+      button.remove-order {
+        position: absolute;
+        right: -.7rem;
+        top: -.7rem;
+      }
+
+      .trigger {
+        flex-grow: 1;
+        border-radius: 8px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: var(--clr-accent-400);
+        color: #fff;
+        padding: 1rem;
+
+        h2 {
+          max-width: 90%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .content {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: 0.3s ease all;
+
+        &[aria-hidden="false"] {
+          grid-template-rows: 1fr;
+        }
+
+        > div {
+          overflow: hidden;
+
+          .content__inner {
+            padding: 1rem;
+
+            background-color: var(--clr-neutral-100);
+            display: grid;
+            gap: 1rem;
+
+            .product {
+              display: grid;
+              grid-auto-flow: column;
+              grid-auto-columns: 20% 1fr;
+              gap: 1rem;
+
+              .details {
+                display: grid;
+                grid-template-columns: 1fr 0.33fr 0.5fr;
+                align-items: center;
+                gap: 1rem;
+
+                .name {
+                  white-space: nowrap;
+                  overflow-y: auto;
+                }
+
+                .quantity {
+                }
+
+                .notes {
+                  max-height: 60px;
+                  overflow-y: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
