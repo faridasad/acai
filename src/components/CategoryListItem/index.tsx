@@ -12,7 +12,6 @@ import "./category-list-item.scss";
 
 // Types
 import type { SelectedProduct } from "../../pages/Category";
-import { Drawer } from "vaul";
 
 interface ListItemProps {
   isInModal: boolean;
